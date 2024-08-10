@@ -1,0 +1,10 @@
+body, html {
+    height: 90vh;
+    background-color: black;
+    color: white;
+}
+
+body {
+    margin: 0;
+    overflow: hidden;
+}
