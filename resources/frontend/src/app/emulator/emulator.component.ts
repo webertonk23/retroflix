@@ -1,4 +1,4 @@
-import { Component, OnInit, AfterViewInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-emulator',
@@ -11,7 +11,7 @@ export class EmulatorComponent implements OnInit, AfterViewInit {
   queryString = window.location.search;
   urlParams = new URLSearchParams();
 
-  urlRom: string = 'assets/chrono-trigger.smc';
+  @Input() urlRom: string = '';
 
   ngOnInit(): void {
     this.urlParams = new URLSearchParams(this.queryString);

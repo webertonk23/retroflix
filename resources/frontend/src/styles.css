@@ -1,10 +1,14 @@
-body, html {
-    height: 90vh;
-    background-color: black;
-    color: white;
-}
+@import "primeng/resources/primeng.css";
+@import "primeicons/primeicons.css";
+@import "primeflex/primeflex.css";
+@import "primeng/resources/themes/mdc-dark-indigo/theme.css";
 
-body {
+/* Order */
+@layer reset, primeng;
+
+/* Reset CSS */
+html, body {
     margin: 0;
-    overflow: hidden;
+    padding: 0;
+    height: 100%;
 }

@@ -1,0 +1,7 @@
+<div class="flex pr-0">
+    <p-card [style]="{ width: '360px' }" class="pr-2" *ngFor="let item of consoles" [routerLink]="'/console/'+item.id">
+        <ng-template pTemplate="header">
+            <img alt="Card" [src]="item.logo" />
+        </ng-template>
+    </p-card>
+</div>

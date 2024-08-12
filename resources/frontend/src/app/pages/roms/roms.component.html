@@ -1,0 +1,11 @@
+<div class="flex pr-0" *ngIf="!viewEmulator">
+    <p-card [style]="{ width: '360px' }" class="pr-2" *ngFor="let item of roms!" (click)="loadRom(item)">
+        <ng-template pTemplate="header">
+            <img alt="Card" [src]="item.image" />
+        </ng-template>
+    </p-card>
+</div>
+
+<div class="flex pr-0" *ngIf="viewEmulator">
+    <app-emulator [urlRom]="urlRom" />
+</div>

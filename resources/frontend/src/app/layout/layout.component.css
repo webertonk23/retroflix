@@ -1,0 +1,12 @@
+.main {
+    display: flex;
+}
+
+.sidebar {
+    transition: width 0.3s;
+    width: 200px;
+    margin-right: 15px;
+    max-width: 100%;
+}
+
+

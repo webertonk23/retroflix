@@ -12,7 +12,7 @@ class ConsoleController extends Controller
      */
     public function index(Request $request)
     {
-        return response()->json(['result' => Console::paginate(10)], 200);
+        return response()->json(Console::paginate(10), 200);
     }
 
     /**
@@ -28,7 +28,14 @@ class ConsoleController extends Controller
      */
     public function show(Console $console)
     {
-        return response()->json(['result' => $console->with('roms')], 200);
+        $result = $console->where('id', $console->id)->with('roms')->first();
+
+        $result->roms = $result->roms->map(function($arr, $key) {
+            $arr->url = asset($arr->url);
+            return $arr;
+        });
+        
+        return response()->json($result, 200);
     }
 
     /**

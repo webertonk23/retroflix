@@ -1,0 +1,15 @@
+<p-menubar>
+    <ng-template pTemplate="start">
+        <div class="flex align-items-center">
+            <img src="./assets/9391718.png" class="brand">
+            <span class="page-title px-2">Retroflix</span>
+        </div>
+    </ng-template>
+    <ng-template pTemplate="end">
+        <div class="flex align-items-center gap-2">
+            <p-avatar image="https://primefaces.org/cdn/primeng/images/demo/avatar/amyelsner.png" shape="circle"
+                (click)="userMenu.toggle($event)" />
+            <p-menu #userMenu [popup]="true" [model]="items"></p-menu>
+        </div>
+    </ng-template>
+</p-menubar>
